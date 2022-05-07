@@ -1,0 +1,90 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 2px;
+}
+
+.logo img {
+    width: 250px;
+    height: 100px;
+}
+
+
+/* .logo {
+    height: 100px;
+} */
+
+.img {
+    width: 100%;
+    height: 100px;
+}
+
+#main {
+    z-index: 1000;
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+    width: 250px;
+    /* border: 1px solid red; */
+    /* overflow-y: scroll; */
+    background-color: #badfdf;
+}
+
+#main .menu-items,
+.sub-modal-level1>ul>li,
+.sub-modal-level2 li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 5px 10px;
+    width: 100%;
+    border: 1px solid white;
+}
+
+#main .menu-items:hover {
+    background-color: rgb(66, 143, 194);
+}
+
+#main .menu-items .sub-modal-level1,
+.sub-modal-level2 {
+    position: absolute;
+    display: none;
+    width: 250px;
+    background-color: #badfdf;
+    left: 250px;
+    top: 0;
+}
+
+#main .menu-items:hover .sub-modal-level1,
+.sub-modal-level1 li:hover .sub-modal-level2 {
+    display: flex;
+    z-index: 1000;
+    background-color: #badfdf;
+}
+
+.sub-modal-level2,
+.sub-modal-level1 {
+    flex-direction: column;
+}
+
+.sub-modal-level1 li:hover {
+    background-color: rgb(66, 143, 194);
+}
